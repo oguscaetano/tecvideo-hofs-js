@@ -4,10 +4,11 @@ const data = require('./database');
 
 function countGender(gender) {
   if(gender === 'M' || gender === 'F'){
-    return data.characters.filter((character) => character.gender === gender);
+    return data.characters.filter((character) => character.gender === gender)
+    .length;
   } else {
-    return 'Valor inválido.';
+    return 'Valor inválido';
   }
 }
 
-console.log(countGender('F'));
+console.log(countGender('M'));
